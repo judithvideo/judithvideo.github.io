@@ -41,7 +41,10 @@
 </div>
 
 <script src="https://cdn.plyr.io/3.3.7/plyr.js"></script>
-<script>const player = new Plyr('#player');</script>
+<script>const player = new Plyr('#player', {
+  /* options */
+  settings: ['quality'], quality: { default: 'hd1080' }
+});</script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
