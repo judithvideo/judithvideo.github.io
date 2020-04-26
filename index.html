@@ -17,6 +17,84 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300" rel="stylesheet" />
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* force scrollbar */
+    html {
+      overflow-y: scroll;
+    }
+
+    /* ---- grid ---- */
+
+    .grid {
+      background: #fff;
+    }
+
+    /* clear fix */
+    .grid:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    /* ---- .grid-item ---- */
+
+    .grid-sizer,
+    .grid-item {
+      width: 33.333%;
+    }
+
+    .grid-item {
+      float: left;
+    }
+
+    .grid-item img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .grid-item--width2 {
+      width: 66.666%;
+    }
+
+
+    .image {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .grid-item:hover .image {
+      opacity: 0.4;
+    }
+
+    .grid-item:hover .middle {
+      opacity: 1;
+    }
+
+    .text {
+      /* background-color:#353535; */
+      color: #000000;
+      font-size: 0.8em;
+      padding: 16px 32px;
+    }
+
     /* This is purely for the demo */
     body {
       background-color: #fff;
@@ -72,24 +150,6 @@
     .container {
       max-width: 100%;
       margin: 0 auto;
-    }
-
-    .grid {
-      height: 400px;
-    }
-
-    .grid-item {
-      width: 800px;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* .grid-item {
-      width: 100px;
-    } */
-
-    .grid-item--width2 {
-      width: 800px;
     }
 
     .plyr {
@@ -165,10 +225,9 @@
         font-size: 1.5em;
       }
 
-      .container {
-        max-width: 100%;
-        width: 100%;
-        margin: 0 auto;
+      #player {
+        z-index: 1000;
+        height: auto;
       }
 
       #about {
@@ -240,8 +299,9 @@
     I create and film ideas.<br>
   </div>
 
-  <div class="container">
-    <div class="child">
+  <div class="grid">
+    <div class="grid-sizer"></div>
+    <div class="grid-item grid-item--width2">
       <video controls crossorigin playsinline poster="reel_posterframe_1080.jpg" id="player">
         <source src="reel_realizadora_creativa_judith_francisco_576.mp4" type="video/mp4" size="576">
         <source src="reel_realizadora_creativa_judith_francisco_720.mp4" type="video/mp4" size="720">
@@ -251,57 +311,244 @@
         <a href="reel_realizadora_creativa_judith_francisco_576.mp4" download>Download</a>
       </video>
     </div>
+    <div class="grid-item"><img src="imgs/frame-01.png?v=1" class="image" alt='Quatre Gats TV3'>
+      <div class="middle">
+        <div class="text">Quatre Gats TV3</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-02.png?v=1" class="image" alt='Universitat Pompeu Fabra "La Pompeupèdia"'>
+      <div class="middle">
+        <div class="text">Universitat Pompeu Fabra "La Pompeupèdia"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-03.png?v=1" class="image" alt='Banco Sabadell "Entre el mar y la montaña"'>
+      <div class="middle">
+        <div class="text">Banco Sabadell "Entre el mar y la montaña"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-04.png?v=1" class="image" alt='Privalia "La vuelta al cole extraordinaria"'>
+      <div class="middle">
+        <div class="text">Privalia "La vuelta al cole extraordinaria"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-05.png?v=1" class="image" alt="Gala del Català de l'any">
+      <div class="middle">
+        <div class="text">Gala del Català de l'any</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-06.png?v=1" class="image" alt='Turisme de Barcelona "BCN & Me"'>
+      <div class="middle">
+        <div class="text">Turisme de Barcelona "BCN & Me"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-07.png?v=1" class="image" alt='Mobilitzats Betevé'>
+      <div class="middle">
+        <div class="text">Mobilitzats Betevé</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-08.png?v=1" class="image" alt='UPF "Videomemòria del curs"'>
+      <div class="middle">
+        <div class="text">UPF "Videomemòria del curs"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-09.png?v=1" class="image" alt='Quarts de nou TV3'>
+      <div class="middle">
+        <div class="text">Quarts de nou TV3</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-10.png?v=1" class="image" alt='Banco Sabadell "Estar donde estés"'>
+      <div class="middle">
+        <div class="text">Banco Sabadell "Estar donde estés"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-11.png?v=1" class="image" alt='Pere Tarrés "Spot 2019"'>
+      <div class="middle">
+        <div class="text">Pere Tarrés "Spot 2019"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-12.png?v=1" class="image" alt='El Retrat del Parlament Canal33'>
+      <div class="middle">
+        <div class="text">El Retrat del Parlament Canal33</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-13.png?v=1" class="image" alt='Hospital del Mar "L&apos;hospital de tots"'>
+      <div class="middle">
+        <div class="text">Hospital del Mar "L&apos;hospital de tots"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-14.png?v=1" class="image" alt='Fútbol Club Barcelona "Innovation Hub"'>
+      <div class="middle">
+        <div class="text">Fútbol Club Barcelona "Innovation Hub"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-15.png?v=1" class="image" alt='Solvia "Inside Solvia"'>
+      <div class="middle">
+        <div class="text">Solvia "Inside Solvia"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-16.png?v=1" class="image"
+        alt='Documental "Jesús Monzón, el líder olvidado por la historia"'>
+      <div class="middle">
+        <div class="text">Documental "Jesús Monzón, el líder olvidado por la historia"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-17.png?v=1" class="image" alt='Robert Riley, cónsul de EEUU'>
+      <div class="middle">
+        <div class="text">Robert Riley, cónsul de EEUU</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-18.png?v=1" class="image" alt='XLS "Spot 2018"'>
+      <div class="middle">
+        <div class="text">XLS "Spot 2018"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-19.png?v=1" class="image" alt='Suez Agriculture'>
+      <div class="middle">
+        <div class="text">Suez Agriculture</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-20.png?v=1" class="image" alt='Trofeo Conde de Godó "¿Conoces a Rafa?"'>
+      <div class="middle">
+        <div class="text">Trofeo Conde de Godó "¿Conoces a Rafa?"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-21.png?v=1" class="image" alt='Oryon "Somos Oryon"'>
+      <div class="middle">
+        <div class="text">Oryon "Somos Oryon"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-22.png?v=1" class="image" alt='Mitja Marató de Barcelona TVE'>
+      <div class="middle">
+        <div class="text">Mitja Marató de Barcelona TVE</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-23.png?v=1" class="image" alt='Pere Tarrés "Spot 2018"'>
+      <div class="middle">
+        <div class="text">Pere Tarrés "Spot 2018"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-24.png?v=1" class="image" alt='Ajuntament de Barcelona "Tu tens la clau"'>
+      <div class="middle">
+        <div class="text">Ajuntament de Barcelona "Tu tens la clau"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-25.png?v=1" class="image" alt='Turisme de Barcelona "BCN Christmas Shopping"'>
+      <div class="middle">
+        <div class="text">Turisme de Barcelona "BCN Christmas Shopping"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-26.png?v=1" class="image" alt='Suez "iBeach app"'>
+      <div class="middle">
+        <div class="text">Suez "iBeach app"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-27.png?v=1" class="image" alt='Quarts de Nou "Exenxanetes"'>
+      <div class="middle">
+        <div class="text">Quarts de Nou "Exenxanetes"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-28.png?v=1" class="image" alt='Universitat Pompeu Fabra "Graduació"'>
+      <div class="middle">
+        <div class="text">Universitat Pompeu Fabra "Graduació"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-29.png?v=1" class="image" alt='Marató de Barcelona TVE'>
+      <div class="middle">
+        <div class="text">Marató de Barcelona TVE</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-30.png?v=1" class="image" alt='Clínica Corachan "Fans de la Salut"'>
+      <div class="middle">
+        <div class="text">Clínica Corachan "Fans de la Salut"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-31.png?v=1" class="image" alt='25è Aniversari Jocs Olímpics Barcelona 92'>
+      <div class="middle">
+        <div class="text">25è Aniversari Jocs Olímpics Barcelona 92</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-32.png?v=1" class="image" alt='TMB "Las personas estamos hechas de historias"'>
+      <div class="middle">
+        <div class="text">TMB "Las personas estamos hechas de historias"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-33.png?v=1" class="image" alt='Tria33 Extra Canal33 "Revetlla Sound"'>
+      <div class="middle">
+        <div class="text">Tria33 Extra Canal33 "Revetlla Sound"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-34.png?v=1" class="image" alt='Tria33 Extra Canal33 "El Circ de demà"'>
+      <div class="middle">
+        <div class="text">Tria33 Extra Canal33 "El Circ de demà"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-35.png?v=1" class="image"
+        alt='Turismo de Canarias "La empresa con el mejor clima del mundo"'>
+      <div class="middle">
+        <div class="text">Turismo de Canarias "La empresa con el mejor clima del mundo"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-36.png?v=1" class="image" alt='Banco Sabadell "Toma Aire"'>
+      <div class="middle">
+        <div class="text">Banco Sabadell "Toma Aire"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-37.png?v=1" class="image" alt='Lavinia "Estamos cocinando algo nuevo"'>
+      <div class="middle">
+        <div class="text">Lavinia "Estamos cocinando algo nuevo"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-38.png?v=1" class="image" alt='Privalia "Almatrichi"'>
+      <div class="middle">
+        <div class="text">Privalia "Almatrichi"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-39.png?v=1" class="image" alt='Pere Tarrés "Cap infant sense colònies"'>
+      <div class="middle">
+        <div class="text">Pere Tarrés "Cap infant sense colònies"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-40.png?v=1" class="image" alt='Videoclip "Canción de amor definitiva"'>
+      <div class="middle">
+        <div class="text">Videoclip "Canción de amor definitiva"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-41.png?v=1" class="image" alt='Laboratorios Esteve "Plan estratégico 2019"'>
+      <div class="middle">
+        <div class="text">Laboratorios Esteve "Plan estratégico 2019"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-42.png?v=1" class="image" alt='Pere Tarrés "Spot 2017"'>
+      <div class="middle">
+        <div class="text">Pere Tarrés "Spot 2017"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-43.png?v=1" class="image" alt='Banco Sabadell "Seguros Combinados"'>
+      <div class="middle">
+        <div class="text">Banco Sabadell "Seguros Combinados"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-44.png?v=1" class="image" alt='Loteria de Catalunya "La grossa, la nostra"'>
+      <div class="middle">
+        <div class="text">Loteria de Catalunya "La grossa, la nostra"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-45.png?v=1" class="image" alt='Banco Sabadell "Lola Ochoa"'>
+      <div class="middle">
+        <div class="text">Banco Sabadell "Lola Ochoa"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-46.png?v=1" class="image" alt='Comansi "Spin Bikes"'>
+      <div class="middle">
+        <div class="text">Comansi "Spin Bikes"</div>
+      </div>
+    </div>
+    <div class="grid-item"><img src="imgs/frame-47.png?v=1" class="image" alt='Banco Sabadell "Retratos del Vijazz"'>
+      <div class="middle">
+        <div class="text">Banco Sabadell "Retratos del Vijazz"</div>
+      </div>
+    </div>
   </div>
-
-  <!-- <div class="grid">
-    <div class="grid-item"><img src="imgs/frame-01.png" alt='Quatre Gats TV3' /></div>
-    <div class="grid-item"><img src="imgs/frame-02.png" alt='Universitat Pompeu Fabra "La Pompeupèdia"' /></div>
-    <div class="grid-item"><img src="imgs/frame-03.png" alt='Banco Sabadell "Entre el mar y la montaña"' /></div>
-    <div class="grid-item"><img src="imgs/frame-04.png" alt='Privalia "La vuelta al cole extraordinaria"' /></div>
-    <div class="grid-item"><img src="imgs/frame-05.png" alt="Gala del Català de l'any" /></div>
-    <div class="grid-item"><img src="imgs/frame-06.png" alt='Turisme de Barcelona "BCN & Me"' /></div>
-    <div class="grid-item"><img src="imgs/frame-07.png" alt='Mobilitzats Betevé' /></div>
-    <div class="grid-item"><img src="imgs/frame-08.png" alt='UPF "Videomemòria del curs"' /></div>
-    <div class="grid-item"><img src="imgs/frame-09.png" alt='Quarts de nou TV3' /></div>
-    <div class="grid-item"><img src="imgs/frame-10.png" alt='Banco Sabadell "Estar donde estés"' /></div>
-    <div class="grid-item"><img src="imgs/frame-11.png" alt='Pere Tarrés "Spot 2019"' /></div>
-    <div class="grid-item"><img src="imgs/frame-12.png" alt='El Retrat del Parlament Canal33' /></div>
-    <div class="grid-item"><img src="imgs/frame-13.png" alt='Hospital del Mar "L&apos;hospital de tots"' /></div>
-    <div class="grid-item"><img src="imgs/frame-14.png" alt='Fútbol Club Barcelona "Innovation Hub"' /></div>
-    <div class="grid-item"><img src="imgs/frame-15.png" alt='Solvia "Inside Solvia"' /></div>
-    <div class="grid-item"><img src="imgs/frame-16.png" alt='Documental "Jesús Monzón, el líder olvidado por la historia"' /></div>
-    <div class="grid-item"><img src="imgs/frame-17.png" alt='Robert Riley, cónsul de EEUU' /></div>
-    <div class="grid-item"><img src="imgs/frame-18.png" alt='XLS "Spot 2018"' /></div>
-    <div class="grid-item"><img src="imgs/frame-19.png" alt='Suez Agriculture' /></div>
-    <div class="grid-item"><img src="imgs/frame-20.png" alt='Trofeo Conde de Godó "¿Conoces a Rafa?"' /></div>
-    <div class="grid-item"><img src="imgs/frame-21.png" alt='Oryon "Somos Oryon"' /></div>
-    <div class="grid-item"><img src="imgs/frame-22.png" alt='Mitja Marató de Barcelona TVE' /></div>
-    <div class="grid-item"><img src="imgs/frame-23.png" alt='Pere Tarrés "Spot 2018"' /></div>
-    <div class="grid-item"><img src="imgs/frame-24.png" alt='Ajuntament de Barcelona "Tu tens la clau"' /></div>
-    <div class="grid-item"><img src="imgs/frame-25.png" alt='Turisme de Barcelona "BCN Christmas Shopping"' /></div>
-    <div class="grid-item"><img src="imgs/frame-26.png" alt='Suez "iBeach app"' /></div>
-    <div class="grid-item"><img src="imgs/frame-27.png" alt='Quarts de Nou "Exenxanetes"' /></div>
-    <div class="grid-item"><img src="imgs/frame-28.png" alt='Universitat Pompeu Fabra "Graduació"' /></div>
-    <div class="grid-item"><img src="imgs/frame-29.png" alt='Marató de Barcelona TVE' /></div>
-    <div class="grid-item"><img src="imgs/frame-30.png" alt='Clínica Corachan "Fans de la Salut"' /></div>
-    <div class="grid-item"><img src="imgs/frame-31.png" alt='25è Aniversari Jocs Olímpics Barcelona 92' /></div>
-    <div class="grid-item"><img src="imgs/frame-32.png" alt='TMB "Las personas estamos hechas de historias"' /></div>
-    <div class="grid-item"><img src="imgs/frame-33.png" alt='Tria33 Extra Canal33 "Revetlla Sound"' /></div>
-    <div class="grid-item"><img src="imgs/frame-34.png" alt='Tria33 Extra Canal33 "El Circ de demà"' /></div>
-    <div class="grid-item"><img src="imgs/frame-35.png" alt='Turismo de Canarias "La empresa con el mejor clima del mundo"' /></div>
-    <div class="grid-item"><img src="imgs/frame-36.png" alt='Banco Sabadell "Toma Aire"' /></div>
-    <div class="grid-item"><img src="imgs/frame-37.png" alt='Lavinia "Estamos cocinando algo nuevo"' /></div>
-    <div class="grid-item"><img src="imgs/frame-38.png" alt='Privalia "Almatrichi"' /></div>
-    <div class="grid-item"><img src="imgs/frame-39.png" alt='Pere Tarrés "Cap infant sense colònies"' /></div>
-    <div class="grid-item"><img src="imgs/frame-40.png" alt='Videoclip "Canción de amor definitiva"' /></div>
-    <div class="grid-item"><img src="imgs/frame-41.png" alt='Laboratorios Esteve "Plan estratégico 2019"' /></div>
-    <div class="grid-item"><img src="imgs/frame-42.png" alt='Pere Tarrés "Spot 2017"' /></div>
-    <div class="grid-item"><img src="imgs/frame-43.png" alt='Banco Sabadell "Seguros Combinados"' /></div>
-    <div class="grid-item"><img src="imgs/frame-44.png" alt='Loteria de Catalunya "La grossa, la nostra"' /></div>
-    <div class="grid-item"><img src="imgs/frame-45.png" alt='Banco Sabadell "Lola Ochoa"' /></div>
-    <div class="grid-item"><img src="imgs/frame-46.png" alt='Comansi "Spin Bikes"' /></div>
-    <div class="grid-item"><img src="imgs/frame-47.png" alt='Banco Sabadell "Retratos del Vijazz"' /></div>
-  </div> -->
 
   <div id='about'>
     <span id='title'>about</span><br>
@@ -338,18 +585,18 @@
       /* options */
       settings: ['quality'], quality: { default: 'hd1080' }
     });
+    // init Masonry
+    var grid = document.querySelector('.grid');
 
-    var elem = document.querySelector('.grid');
-    var msnry = new Masonry(elem, {
-      // options
+    var msnry = new Masonry(grid, {
       itemSelector: '.grid-item',
-      columnWidth: 400
+      columnWidth: '.grid-sizer',
+      percentPosition: true
     });
 
-    // element argument can be a selector string
-    //   for an individual element
-    var msnry = new Masonry('.grid', {
-      // options
+    imagesLoaded(grid).on('progress', function () {
+      // layout Masonry after each image loads
+      msnry.layout();
     });
     document.addEventListener('DOMContentLoaded', () => {
       // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
