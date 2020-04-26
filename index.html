@@ -13,7 +13,8 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link id="favicon" rel="shortcut icon" href="/favicon-32.png" sizes="16x16 32x32 48x48" type="image/png">
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.3.7/plyr.css">
+  <!-- <link rel="stylesheet" href="https://cdn.plyr.io/3.3.7/plyr.css"> -->
+  <link rel="stylesheet" href="plyr.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300" rel="stylesheet" />
 
   <style>
@@ -159,6 +160,10 @@
     .plyr {
       border-radius: 4px;
       margin-bottom: 15px;
+    }
+
+    #player {
+      /* filter: hue-rotate(180deg); */
     }
 
     #about {
@@ -354,7 +359,7 @@
   </div>
 
   <div class="container">
-    <video controls crossorigin playsinline poster="reel_posterframe_1080.jpg" id="player">
+    <video controls crossorigin playsinline poster="reel_posterframe_1080.jpg?v=1" id="player">
       <source src="reel_realizadora_creativa_judith_francisco_576.mp4" type="video/mp4" size="576">
       <source src="reel_realizadora_creativa_judith_francisco_720.mp4" type="video/mp4" size="720">
       <source src="reel_realizadora_creativa_judith_francisco_1080.mp4" type="video/mp4" size="1080">
