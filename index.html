@@ -162,6 +162,7 @@
     }
 
     #about {
+      text-align: justify;
       width: 80%;
       font-size: 1em;
       margin: 0 auto;
@@ -174,7 +175,26 @@
       font-size: 1.2em;
     }
 
+    #about #col-1{
+      float: left;
+      width: 65%;
+    }
+    
+    #about #col-2{
+      text-align: right;
+      float: left;
+      width: 30%;
+      margin-left: 5%;
+    }
+
+    #about #col-3{
+      float: left;
+      width: 30%;
+      margin-left: 5%;
+    }
+
     #contact {
+      clear: both;
       width: 80%;
       font-size: 1em;
       margin: 0 auto;
@@ -220,18 +240,36 @@
 
     @media only screen and (max-width: 600px) {
       header #logo {
-        width: 100px;
+        width: 150px;
+        font-size: 0.8em;
       }
 
       header #menu {
-        font-size: 1em;
+        font-size: 0.8em;
         width: 100px;
       }
 
       #headline {
-        margin: 50px;
-        margin-top: 80px;
+        margin: 80px 50px;
         font-size: 1.5em;
+      }
+
+      .container {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .grid {
+        margin-top: -15px;
+      }
+
+      .grid-sizer,
+      .grid-item {
+        width: 50%;
+      }
+
+      .text {
+        font-size: 0.7em;
       }
 
       #about {
@@ -240,6 +278,18 @@
 
       #about #title {
         font-size: 1.2em;
+      }
+
+      #about #col-1{
+        width: 100%;
+      }
+
+      #about #col-2{
+        margin-top: 20px;
+        width: 100%;
+        text-align: left;
+        clear: both;
+        margin-left: 0;
       }
 
       #contact {
@@ -316,6 +366,10 @@
 
   <div class="grid">
     <div class="grid-sizer"></div>
+
+    <!-- <div class="grid-item grid-item--width2">
+    </div> -->
+  
     <div class="grid-item hover-bg"><img src="imgs/frame-01.png?v=1" class="image" alt='Quatre Gats TV3'>
       <div class="middle">
         <div class="text">Quatre Gats<br>TV3</div>
@@ -556,20 +610,28 @@
   </div>
 
   <div id='about'>
-    <span id='title'>about</span><br>
-    More than 10 years creating video, conceptualizing ideas, filming and editing for television, brands, advertisement
-    and events.
-    Started as a camera, journalist, editor and colorist and soon after began directing. <br>
-    Extensive experience managing filming teams, good customer relationship skills, teamwork, ability to work under
-    pressure and tight timings.
-    Fluent in English, passionate about photography and technology, creative mentality, proactivity and optimism,
-    constant updating in new trends and tools. <br>
-    See full biography on <a href="https://www.linkedin.com/in/judithfrancisco">LinkedIn</a>
+    <div id="col-1">
+      <span id='title'>about</span><br>
+      More than 10 years creating video, conceptualizing ideas, filming and editing for television, brands, advertisement
+      and events.
+      Started as a camera, journalist, editor and colorist and soon after began directing. <br>
+      <br>
+      Extensive experience managing filming teams, good customer relationship skills, teamwork, ability to work under
+      pressure and tight timings.
+      Fluent in English, passionate about photography and technology, creative mentality, proactivity and optimism,
+      constant updating in new trends and tools. <br>
+      <br>
+      See full biography on <a style='text-decoration: underline;' href="https://www.linkedin.com/in/judithfrancisco">LinkedIn</a>
+    </div>
+    <div id='col-2'>
+      <span id='title'>contact</span><br>
+      send me a message at <br><a href="mailto:hello@judith.video">hello@judith.video</a>
+    </div>
   </div>
 
   <div id='contact'>
-    <span id='title'>contact</span><br>
-    send me a message at <a href="mailto:hello@judith.video">hello@judith.video</a>
+    <!-- <span id='title'>contact</span><br>
+    send me a message at <a href="mailto:hello@judith.video">hello@judith.video</a> -->
   </div>
 
   <footer>
