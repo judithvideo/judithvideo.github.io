@@ -354,7 +354,7 @@
   </div>
 
   <div class="container">
-    <video controls crossorigin playsinline poster="reel_posterframe_1080.jpg?v=2" id="player">
+    <video controls crossorigin playsinline poster="reel_posterframe_1080.jpg?v=2" id="player" autoplay="true" muted="muted">
       <source src="reel_realizadora_creativa_judith_francisco_576.mp4" type="video/mp4" size="576">
       <source src="reel_realizadora_creativa_judith_francisco_720.mp4" type="video/mp4" size="720">
       <source src="reel_realizadora_creativa_judith_francisco_1080.mp4" type="video/mp4" size="1080">
@@ -679,9 +679,11 @@
     const player = new Plyr('#player', {
       /* options */
       settings: ['quality'], quality: { default: 'hd1080' },
+      storage:	{ enabled: false, key: 'plyr' },
       muted: true,
       autoplay: true,
     });
+
     // init Masonry
     var grid = document.querySelector('.grid');
 
