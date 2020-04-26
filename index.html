@@ -59,6 +59,9 @@
       width: 66.666%;
     }
 
+    .hover-bg{
+      background-color: #000000;
+    }
 
     .image {
       opacity: 1;
@@ -75,6 +78,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
+      width: 80%;
       transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       text-align: center;
@@ -90,9 +94,9 @@
 
     .text {
       /* background-color:#353535; */
-      color: #000000;
+      color: #ffffff;
       font-size: 0.8em;
-      padding: 16px 32px;
+      padding: 16px 22px;
     }
 
     /* This is purely for the demo */
@@ -142,13 +146,13 @@
 
     #headline {
       font-weight: bold;
-      margin: 100px;
+      margin: 20px;
       font-size: 2em;
       text-align: center;
     }
 
     .container {
-      max-width: 100%;
+      max-width: 60%;
       margin: 0 auto;
     }
 
@@ -159,7 +163,7 @@
 
     #about {
       width: 80%;
-      font-size: 1.5em;
+      font-size: 1em;
       margin: 0 auto;
       color: #676666;
       padding-top: 50px;
@@ -172,7 +176,7 @@
 
     #contact {
       width: 80%;
-      font-size: 1.5em;
+      font-size: 1em;
       margin: 0 auto;
       color: #676666;
       padding-top: 50px;
@@ -185,7 +189,7 @@
     }
 
     footer {
-      font-size: 1.2em;
+      font-size: 0.8em;
       padding: 5px;
       background-color: #e4e4e4;
     }
@@ -207,6 +211,11 @@
       float: right;
       text-align: right;
       width: 200px;
+      margin-top: -5px;
+    }
+
+    footer #social-media img:hover {
+      opacity: 0.6;
     }
 
     @media only screen and (max-width: 600px) {
@@ -223,11 +232,6 @@
         margin: 50px;
         margin-top: 80px;
         font-size: 1.5em;
-      }
-
-      #player {
-        z-index: 1000;
-        height: auto;
       }
 
       #about {
@@ -299,253 +303,254 @@
     I create and film ideas.<br>
   </div>
 
+  <div class="container">
+    <video controls crossorigin playsinline poster="reel_posterframe_1080.jpg" id="player">
+      <source src="reel_realizadora_creativa_judith_francisco_576.mp4" type="video/mp4" size="576">
+      <source src="reel_realizadora_creativa_judith_francisco_720.mp4" type="video/mp4" size="720">
+      <source src="reel_realizadora_creativa_judith_francisco_1080.mp4" type="video/mp4" size="1080">
+
+      <!-- Fallback for browsers that don't support the <video> element -->
+      <a href="reel_realizadora_creativa_judith_francisco_576.mp4" download>Download</a>
+    </video>
+  </div>
+
   <div class="grid">
     <div class="grid-sizer"></div>
-    <div class="grid-item grid-item--width2">
-      <video controls crossorigin playsinline poster="reel_posterframe_1080.jpg" id="player">
-        <source src="reel_realizadora_creativa_judith_francisco_576.mp4" type="video/mp4" size="576">
-        <source src="reel_realizadora_creativa_judith_francisco_720.mp4" type="video/mp4" size="720">
-        <source src="reel_realizadora_creativa_judith_francisco_1080.mp4" type="video/mp4" size="1080">
-
-        <!-- Fallback for browsers that don't support the <video> element -->
-        <a href="reel_realizadora_creativa_judith_francisco_576.mp4" download>Download</a>
-      </video>
-    </div>
-    <div class="grid-item"><img src="imgs/frame-01.png?v=1" class="image" alt='Quatre Gats TV3'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-01.png?v=1" class="image" alt='Quatre Gats TV3'>
       <div class="middle">
-        <div class="text">Quatre Gats TV3</div>
+        <div class="text">Quatre Gats<br>TV3</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-02.png?v=1" class="image" alt='Universitat Pompeu Fabra "La Pompeupèdia"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-02.png?v=1" class="image" alt='Universitat Pompeu Fabra "La Pompeupèdia"'>
       <div class="middle">
-        <div class="text">Universitat Pompeu Fabra "La Pompeupèdia"</div>
+        <div class="text">Universitat Pompeu Fabra<br>"La Pompeupèdia"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-03.png?v=1" class="image" alt='Banco Sabadell "Entre el mar y la montaña"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-03.png?v=1" class="image" alt='Banco Sabadell "Entre el mar y la montaña"'>
       <div class="middle">
-        <div class="text">Banco Sabadell "Entre el mar y la montaña"</div>
+        <div class="text">Banco Sabadell<br>"Entre el mar y la montaña"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-04.png?v=1" class="image" alt='Privalia "La vuelta al cole extraordinaria"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-04.png?v=1" class="image" alt='Privalia "La vuelta al cole extraordinaria"'>
       <div class="middle">
-        <div class="text">Privalia "La vuelta al cole extraordinaria"</div>
+        <div class="text">Privalia<br>"La vuelta al cole extraordinaria"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-05.png?v=1" class="image" alt="Gala del Català de l'any">
+    <div class="grid-item hover-bg"><img src="imgs/frame-05.png?v=1" class="image" alt="Gala del Català de l'any">
       <div class="middle">
         <div class="text">Gala del Català de l'any</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-06.png?v=1" class="image" alt='Turisme de Barcelona "BCN & Me"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-06.png?v=1" class="image" alt='Turisme de Barcelona "BCN & Me"'>
       <div class="middle">
-        <div class="text">Turisme de Barcelona "BCN & Me"</div>
+        <div class="text">Turisme de Barcelona<br>"BCN & Me"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-07.png?v=1" class="image" alt='Mobilitzats Betevé'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-07.png?v=1" class="image" alt='Mobilitzats Betevé'>
       <div class="middle">
-        <div class="text">Mobilitzats Betevé</div>
+        <div class="text">Mobilitzats<br>Betevé</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-08.png?v=1" class="image" alt='UPF "Videomemòria del curs"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-08.png?v=1" class="image" alt='UPF "Videomemòria del curs"'>
       <div class="middle">
-        <div class="text">UPF "Videomemòria del curs"</div>
+        <div class="text">UPF<br>"Videomemòria del curs"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-09.png?v=1" class="image" alt='Quarts de nou TV3'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-09.png?v=1" class="image" alt='Quarts de nou TV3'>
       <div class="middle">
-        <div class="text">Quarts de nou TV3</div>
+        <div class="text">Quarts de nou<br>TV3</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-10.png?v=1" class="image" alt='Banco Sabadell "Estar donde estés"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-10.png?v=1" class="image" alt='Banco Sabadell "Estar donde estés"'>
       <div class="middle">
-        <div class="text">Banco Sabadell "Estar donde estés"</div>
+        <div class="text">Banco Sabadell<br>"Estar donde estés"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-11.png?v=1" class="image" alt='Pere Tarrés "Spot 2019"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-11.png?v=1" class="image" alt='Pere Tarrés "Spot 2019"'>
       <div class="middle">
-        <div class="text">Pere Tarrés "Spot 2019"</div>
+        <div class="text">Pere Tarrés<br>"Spot 2019"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-12.png?v=1" class="image" alt='El Retrat del Parlament Canal33'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-12.png?v=1" class="image" alt='El Retrat del Parlament Canal33'>
       <div class="middle">
-        <div class="text">El Retrat del Parlament Canal33</div>
+        <div class="text">El Retrat del Parlament<br>Canal33</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-13.png?v=1" class="image" alt='Hospital del Mar "L&apos;hospital de tots"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-13.png?v=1" class="image" alt='Hospital del Mar "L&apos;hospital de tots"'>
       <div class="middle">
-        <div class="text">Hospital del Mar "L&apos;hospital de tots"</div>
+        <div class="text">Hospital del Mar<br>"L&apos;Hospital de tots"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-14.png?v=1" class="image" alt='Fútbol Club Barcelona "Innovation Hub"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-14.png?v=1" class="image" alt='Fútbol Club Barcelona "Innovation Hub"'>
       <div class="middle">
-        <div class="text">Fútbol Club Barcelona "Innovation Hub"</div>
+        <div class="text">Fútbol Club Barcelona<br>"Innovation Hub"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-15.png?v=1" class="image" alt='Solvia "Inside Solvia"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-15.png?v=1" class="image" alt='Solvia "Inside Solvia"'>
       <div class="middle">
-        <div class="text">Solvia "Inside Solvia"</div>
+        <div class="text">Solvia<br>"Inside Solvia"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-16.png?v=1" class="image"
+    <div class="grid-item hover-bg"><img src="imgs/frame-16.png?v=1" class="image"
         alt='Documental "Jesús Monzón, el líder olvidado por la historia"'>
       <div class="middle">
-        <div class="text">Documental "Jesús Monzón, el líder olvidado por la historia"</div>
+        <div class="text">Documental<br>"Jesús Monzón, el líder olvidado por la historia"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-17.png?v=1" class="image" alt='Robert Riley, cónsul de EEUU'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-17.png?v=1" class="image" alt='Robert Riley, cónsul de EEUU'>
       <div class="middle">
         <div class="text">Robert Riley, cónsul de EEUU</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-18.png?v=1" class="image" alt='XLS "Spot 2018"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-18.png?v=1" class="image" alt='XLS "Spot 2018"'>
       <div class="middle">
-        <div class="text">XLS "Spot 2018"</div>
+        <div class="text">XLS<br>"Spot 2018"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-19.png?v=1" class="image" alt='Suez Agriculture'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-19.png?v=1" class="image" alt='Suez Agriculture'>
       <div class="middle">
         <div class="text">Suez Agriculture</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-20.png?v=1" class="image" alt='Trofeo Conde de Godó "¿Conoces a Rafa?"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-20.png?v=1" class="image" alt='Trofeo Conde de Godó "¿Conoces a Rafa?"'>
       <div class="middle">
-        <div class="text">Trofeo Conde de Godó "¿Conoces a Rafa?"</div>
+        <div class="text">Trofeo Conde de Godó<br>"¿Conoces a Rafa?"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-21.png?v=1" class="image" alt='Oryon "Somos Oryon"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-21.png?v=1" class="image" alt='Oryon "Somos Oryon"'>
       <div class="middle">
-        <div class="text">Oryon "Somos Oryon"</div>
+        <div class="text">Oryon<br>"Somos Oryon"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-22.png?v=1" class="image" alt='Mitja Marató de Barcelona TVE'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-22.png?v=1" class="image" alt='Mitja Marató de Barcelona TVE'>
       <div class="middle">
-        <div class="text">Mitja Marató de Barcelona TVE</div>
+        <div class="text">Mitja Marató de Barcelona<br>TVE</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-23.png?v=1" class="image" alt='Pere Tarrés "Spot 2018"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-23.png?v=1" class="image" alt='Pere Tarrés "Spot 2018"'>
       <div class="middle">
-        <div class="text">Pere Tarrés "Spot 2018"</div>
+        <div class="text">Pere Tarrés<br>"Spot 2018"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-24.png?v=1" class="image" alt='Ajuntament de Barcelona "Tu tens la clau"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-24.png?v=1" class="image" alt='Ajuntament de Barcelona "Tu tens la clau"'>
       <div class="middle">
-        <div class="text">Ajuntament de Barcelona "Tu tens la clau"</div>
+        <div class="text">Ajuntament de Barcelona<br>"Tu tens la clau"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-25.png?v=1" class="image" alt='Turisme de Barcelona "BCN Christmas Shopping"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-25.png?v=1" class="image" alt='Turisme de Barcelona "BCN Christmas Shopping"'>
       <div class="middle">
-        <div class="text">Turisme de Barcelona "BCN Christmas Shopping"</div>
+        <div class="text">Turisme de Barcelona<br>"BCN Christmas Shopping"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-26.png?v=1" class="image" alt='Suez "iBeach app"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-26.png?v=1" class="image" alt='Suez "iBeach app"'>
       <div class="middle">
-        <div class="text">Suez "iBeach app"</div>
+        <div class="text">Suez<br>"iBeach app"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-27.png?v=1" class="image" alt='Quarts de Nou "Exenxanetes"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-27.png?v=1" class="image" alt='Quarts de Nou "Exenxanetes"'>
       <div class="middle">
-        <div class="text">Quarts de Nou "Exenxanetes"</div>
+        <div class="text">Quarts de Nou<br>"Exenxanetes"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-28.png?v=1" class="image" alt='Universitat Pompeu Fabra "Graduació"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-28.png?v=1" class="image" alt='Universitat Pompeu Fabra "Graduació"'>
       <div class="middle">
-        <div class="text">Universitat Pompeu Fabra "Graduació"</div>
+        <div class="text">Universitat Pompeu Fabra<br>"Graduació"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-29.png?v=1" class="image" alt='Marató de Barcelona TVE'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-29.png?v=1" class="image" alt='Marató de Barcelona TVE'>
       <div class="middle">
-        <div class="text">Marató de Barcelona TVE</div>
+        <div class="text">Marató de Barcelona<br>TVE</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-30.png?v=1" class="image" alt='Clínica Corachan "Fans de la Salut"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-30.png?v=1" class="image" alt='Clínica Corachan "Fans de la Salut"'>
       <div class="middle">
-        <div class="text">Clínica Corachan "Fans de la Salut"</div>
+        <div class="text">Clínica Corachan<br>"Fans de la Salut"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-31.png?v=1" class="image" alt='25è Aniversari Jocs Olímpics Barcelona 92'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-31.png?v=1" class="image" alt='25è Aniversari Jocs Olímpics Barcelona 92'>
       <div class="middle">
         <div class="text">25è Aniversari Jocs Olímpics Barcelona 92</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-32.png?v=1" class="image" alt='TMB "Las personas estamos hechas de historias"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-32.png?v=1" class="image" alt='TMB "Las personas estamos hechas de historias"'>
       <div class="middle">
-        <div class="text">TMB "Las personas estamos hechas de historias"</div>
+        <div class="text">TMB<br>"Las personas estamos hechas de historias"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-33.png?v=1" class="image" alt='Tria33 Extra Canal33 "Revetlla Sound"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-33.png?v=1" class="image" alt='Tria33 Extra Canal33 "Revetlla Sound"'>
       <div class="middle">
-        <div class="text">Tria33 Extra Canal33 "Revetlla Sound"</div>
+        <div class="text">Tria33 Extra Canal33<br>"Revetlla Sound"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-34.png?v=1" class="image" alt='Tria33 Extra Canal33 "El Circ de demà"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-34.png?v=1" class="image" alt='Tria33 Extra Canal33 "El Circ de demà"'>
       <div class="middle">
-        <div class="text">Tria33 Extra Canal33 "El Circ de demà"</div>
+        <div class="text">Tria33 Extra Canal33<br>"El Circ de demà"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-35.png?v=1" class="image"
+    <div class="grid-item hover-bg"><img src="imgs/frame-35.png?v=1" class="image"
         alt='Turismo de Canarias "La empresa con el mejor clima del mundo"'>
       <div class="middle">
-        <div class="text">Turismo de Canarias "La empresa con el mejor clima del mundo"</div>
+        <div class="text">Turismo de Canarias<br>"La empresa con el mejor clima del mundo"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-36.png?v=1" class="image" alt='Banco Sabadell "Toma Aire"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-36.png?v=1" class="image" alt='Banco Sabadell "Toma Aire"'>
       <div class="middle">
-        <div class="text">Banco Sabadell "Toma Aire"</div>
+        <div class="text">Banco Sabadell<br>"Toma Aire"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-37.png?v=1" class="image" alt='Lavinia "Estamos cocinando algo nuevo"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-37.png?v=1" class="image" alt='Lavinia "Estamos cocinando algo nuevo"'>
       <div class="middle">
-        <div class="text">Lavinia "Estamos cocinando algo nuevo"</div>
+        <div class="text">Lavinia<br>"Estamos cocinando algo nuevo"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-38.png?v=1" class="image" alt='Privalia "Almatrichi"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-38.png?v=1" class="image" alt='Privalia "Almatrichi"'>
       <div class="middle">
-        <div class="text">Privalia "Almatrichi"</div>
+        <div class="text">Privalia<br>"Almatrichi"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-39.png?v=1" class="image" alt='Pere Tarrés "Cap infant sense colònies"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-39.png?v=1" class="image" alt='Pere Tarrés "Cap infant sense colònies"'>
       <div class="middle">
-        <div class="text">Pere Tarrés "Cap infant sense colònies"</div>
+        <div class="text">Pere Tarrés<br>"Cap infant sense colònies"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-40.png?v=1" class="image" alt='Videoclip "Canción de amor definitiva"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-40.png?v=1" class="image" alt='Videoclip "Canción de amor definitiva"'>
       <div class="middle">
-        <div class="text">Videoclip "Canción de amor definitiva"</div>
+        <div class="text">Videoclip<br>"Canción de amor definitiva"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-41.png?v=1" class="image" alt='Laboratorios Esteve "Plan estratégico 2019"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-41.png?v=1" class="image" alt='Laboratorios Esteve "Plan estratégico 2019"'>
       <div class="middle">
-        <div class="text">Laboratorios Esteve "Plan estratégico 2019"</div>
+        <div class="text">Laboratorios Esteve<br>"Plan estratégico 2019"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-42.png?v=1" class="image" alt='Pere Tarrés "Spot 2017"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-42.png?v=1" class="image" alt='Pere Tarrés "Spot 2017"'>
       <div class="middle">
-        <div class="text">Pere Tarrés "Spot 2017"</div>
+        <div class="text">Pere Tarrés<br>"Spot 2017"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-43.png?v=1" class="image" alt='Banco Sabadell "Seguros Combinados"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-43.png?v=1" class="image" alt='Banco Sabadell "Seguros Combinados"'>
       <div class="middle">
-        <div class="text">Banco Sabadell "Seguros Combinados"</div>
+        <div class="text">Banco Sabadell<br>"Seguros Combinados"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-44.png?v=1" class="image" alt='Loteria de Catalunya "La grossa, la nostra"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-44.png?v=1" class="image" alt='Loteria de Catalunya "La grossa, la nostra"'>
       <div class="middle">
-        <div class="text">Loteria de Catalunya "La grossa, la nostra"</div>
+        <div class="text">Loteria de Catalunya<br>"La grossa, la nostra"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-45.png?v=1" class="image" alt='Banco Sabadell "Lola Ochoa"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-45.png?v=1" class="image" alt='Banco Sabadell "Lola Ochoa"'>
       <div class="middle">
-        <div class="text">Banco Sabadell "Lola Ochoa"</div>
+        <div class="text">Banco Sabadell<br>"Lola Ochoa"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-46.png?v=1" class="image" alt='Comansi "Spin Bikes"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-46.png?v=1" class="image" alt='Comansi "Spin Bikes"'>
       <div class="middle">
-        <div class="text">Comansi "Spin Bikes"</div>
+        <div class="text">Comansi<br>"Spin Bikes"</div>
       </div>
     </div>
-    <div class="grid-item"><img src="imgs/frame-47.png?v=1" class="image" alt='Banco Sabadell "Retratos del Vijazz"'>
+    <div class="grid-item hover-bg"><img src="imgs/frame-47.png?v=1" class="image" alt='Banco Sabadell "Retratos del Vijazz"'>
       <div class="middle">
-        <div class="text">Banco Sabadell "Retratos del Vijazz"</div>
+        <div class="text">Banco Sabadell<br>"Retratos del Vijazz"</div>
       </div>
     </div>
   </div>
@@ -573,7 +578,9 @@
         © Judith Francisco. 2020.
       </div>
       <div id='social-media'>
-        <a href="https://www.linkedin.com/in/judithfrancisco">in</a>
+        <a href="https://www.linkedin.com/in/judithfrancisco">
+          <img src="linkedin.svg" width="25px" height="25px" alt="LinkedIn Page" onerror="this.src='linkedin.png'">
+        </a>
       </div>
     </div>
   </footer>
@@ -594,10 +601,6 @@
       percentPosition: true
     });
 
-    imagesLoaded(grid).on('progress', function () {
-      // layout Masonry after each image loads
-      msnry.layout();
-    });
     document.addEventListener('DOMContentLoaded', () => {
       // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
       //const player = new Plyr('#player');
