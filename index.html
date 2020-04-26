@@ -637,7 +637,7 @@
   <footer>
     <div id='contain-footer'>
       <div id='copy'>
-        © Judith Francisco. 2020.
+        © Judith Francisco. <span id="year">2018</span>.
       </div>
       <div id='social-media'>
         <a href="https://www.linkedin.com/in/judithfrancisco/">
@@ -670,6 +670,10 @@
       // layout Masonry after each image loads
       msnry.layout();
     });
+
+    var date = new Date();
+    var year = date.getFullYear();
+    document.getElementById("year").innerHTML = year;
 
     document.addEventListener('DOMContentLoaded', () => {
       // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
