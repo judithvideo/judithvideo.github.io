@@ -1,0 +1,726 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Judith Francisco | Creative Filmmaker</title>
+  <meta name="description"
+    content="More than 10 years creating video, conceptualizing ideas, filming and editing for television, brands, advertisement and events.">
+  <meta name="author" content="Judith Francisco">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Judith Francisco | Creative Filmmaker" />
+  <meta property="og:description"
+    content="More than 10 years creating video, conceptualizing ideas, filming and editing for television, brands, advertisement and events." />
+  <meta property="og:site_name" content="Judith Francisco | Creative Filmmaker" />
+  <meta property="og:image" content="https://judith.video/opengraph.png" />
+  <meta property="og:image:secure_url" content="https://judith.video/opengraph.png" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="500" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:description"
+    content="More than 10 years creating video, conceptualizing ideas, filming and editing for television, brands, advertisement and events." />
+  <meta name="twitter:title" content="Judith Francisco | Creative Filmmaker" />
+  <meta name="twitter:image" content="https://judith.video/opengraph.png" />
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link id="favicon" rel="shortcut icon" href="/favicon-32.png" sizes="16x16 32x32 48x48" type="image/png">
+
+  <!-- <link rel="stylesheet" href="https://cdn.plyr.io/3.3.7/plyr.css"> -->
+  <link rel="stylesheet" href="plyr.css?v=2">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* force scrollbar */
+    html {
+      overflow-y: scroll;
+    }
+
+    /* ---- grid ---- */
+
+    .grid {
+      background: #fff;
+    }
+
+    /* clear fix */
+    .grid:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    /* ---- .grid-item ---- */
+
+    .grid-sizer,
+    .grid-item {
+      width: 33.333%;
+    }
+
+    .grid-item {
+      float: left;
+    }
+
+    .grid-item img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .grid-item--width2 {
+      width: 66.666%;
+    }
+
+    .hover-bg {
+      background-color: #000000;
+    }
+
+    .image {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .grid-item:hover .image {
+      opacity: 0.4;
+    }
+
+    .grid-item:hover .middle {
+      opacity: 1;
+    }
+
+    .text {
+      /* background-color:#353535; */
+      color: #ffffff;
+      font-size: 0.8em;
+      padding: 16px 22px;
+    }
+
+    /* This is purely for the demo */
+    body {
+      background-color: #fff;
+      margin: 0;
+      font-family: Poppins, sans-serif;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    a {
+      color: #353535;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #353535;
+    }
+
+    a:hover {
+      color: #919191;
+    }
+
+    header {
+      margin: 30px;
+      margin-top: 0px;
+      font-size: 1em;
+    }
+
+    header #contain-header {
+      padding-top: 10px;
+      height: 30px;
+      margin: 0 auto;
+    }
+
+    header #logo {
+      width: 400px;
+      float: left;
+    }
+
+    header #menu {
+      float: right;
+      text-align: right;
+      font-size: 1em;
+      width: 200px;
+    }
+
+    #headline {
+      font-weight: bold;
+      margin: 20px;
+      font-size: 2em;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    #player {
+      /* filter: hue-rotate(180deg); */
+    }
+
+    #about {
+      text-align: justify;
+      width: 80%;
+      font-size: 1em;
+      margin: 0 auto;
+      color: #676666;
+      padding-top: 50px;
+    }
+
+    #about #title {
+      color: #000000;
+      font-size: 1.2em;
+    }
+
+    #about #col-1 {
+      float: left;
+      width: 65%;
+    }
+
+    #about #col-2 {
+      text-align: right;
+      float: left;
+      width: 30%;
+      margin-left: 5%;
+    }
+
+    #about #col-3 {
+      float: left;
+      width: 30%;
+      margin-left: 5%;
+    }
+
+    #contact {
+      clear: both;
+      width: 80%;
+      font-size: 1em;
+      margin: 0 auto;
+      color: #676666;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    #contact #title {
+      color: #000000;
+      font-size: 1.2em;
+    }
+
+    footer {
+      font-size: 0.8em;
+      padding: 5px;
+      background-color: #e4e4e4;
+    }
+
+    footer #contain-footer {
+      width: 80%;
+      padding-top: 10px;
+      height: 30px;
+      margin: 0 auto;
+    }
+
+    footer #copy {
+      width: 400px;
+      float: left;
+      text-align: left;
+    }
+
+    footer #social-media {
+      float: right;
+      text-align: right;
+      width: 200px;
+      margin-top: -5px;
+    }
+
+    footer #social-media img:hover {
+      opacity: 0.6;
+    }
+
+    @media only screen and (max-width: 600px) {
+      header #logo {
+        width: 150px;
+        font-size: 0.8em;
+      }
+
+      header #menu {
+        font-size: 0.8em;
+        width: 100px;
+      }
+
+      #headline {
+        margin: 80px 50px;
+        font-size: 1.5em;
+      }
+
+      .container {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .grid {}
+
+      .grid-sizer,
+      .grid-item {
+        width: 50%;
+      }
+
+      .text {
+        font-size: 0.7em;
+      }
+
+      #about {
+        font-size: 1.0em;
+      }
+
+      #about #title {
+        font-size: 1.2em;
+      }
+
+      #about #col-1 {
+        width: 100%;
+      }
+
+      #about #col-2 {
+        margin-top: 20px;
+        width: 100%;
+        text-align: left;
+        clear: both;
+        margin-left: 0;
+      }
+
+      #contact {
+        font-size: 1.0em;
+      }
+
+      #contact #title {
+        font-size: 1.2em;
+      }
+
+      footer {
+        font-size: 0.8em;
+      }
+
+      footer #copy {
+        width: 200px;
+      }
+
+      footer #social-media {
+        width: 50px;
+      }
+
+    }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <header>
+    <div id='contain-header'>
+      <div id='logo'>
+        Judith Francisco
+      </div>
+      <div id='menu'>
+        <a href="#about">about</a><br>
+        <a href="#contact">contact</a>
+      </div>
+    </div>
+  </header>
+
+  <div id="headline">
+    I create and film ideas.<br>
+  </div>
+
+  <div class="container">
+    <video controls crossorigin playsinline poster="reel_posterframe_1080.jpg?v=2" id="player" autoplay="true" muted="muted">
+      <source src="reel_realizadora_creativa_judith_francisco_576.mp4" type="video/mp4" size="576">
+      <source src="reel_realizadora_creativa_judith_francisco_720.mp4" type="video/mp4" size="720">
+      <source src="reel_realizadora_creativa_judith_francisco_1080.mp4" type="video/mp4" size="1080">
+
+      <!-- Fallback for browsers that don't support the <video> element -->
+      <a href="reel_realizadora_creativa_judith_francisco_576.mp4" download>Download</a>
+    </video>
+  </div>
+
+  <div class="grid">
+    <div class="grid-sizer"></div>
+
+    <!-- <div class="grid-item grid-item--width2">
+    </div> -->
+    <div class="grid-item hover-bg"><img src="imgs/frame-49.png?v=2" class="image" alt='Escala Humana La2 TVE'>
+      <div class="middle">
+        <div class="text">Escala Humana<br>La2 TVE</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-48.png?v=2" class="image" alt='La Comunitat TV3'>
+      <div class="middle">
+        <div class="text">La Comunitat<br>TV3</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-01.png?v=2" class="image" alt='Quatre Gats TV3'>
+      <div class="middle">
+        <div class="text">Quatre Gats<br>TV3</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-02.png?v=2" class="image"
+        alt='Universitat Pompeu Fabra "La Pompeupèdia"'>
+      <div class="middle">
+        <div class="text">Universitat Pompeu Fabra<br>"La Pompeupèdia"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-03.png?v=2" class="image"
+        alt='Banco Sabadell "Entre el mar y la montaña"'>
+      <div class="middle">
+        <div class="text">Banco Sabadell<br>"Entre el mar y la montaña"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-04.png?v=2" class="image"
+        alt='Privalia "La vuelta al cole extraordinaria"'>
+      <div class="middle">
+        <div class="text">Privalia<br>"La vuelta al cole extraordinaria"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-50.png?v=2" class="image" alt='Blanquerna - URL "Campaña Promoción Másters"'>
+      <div class="middle">
+        <div class="text">Blanquerna - URL<br>"Campaña Promoción Másters"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-05.png?v=2" class="image" alt="Gala del Català de l'any">
+      <div class="middle">
+        <div class="text">Gala del Català de l'any</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-06.png?v=2" class="image"
+        alt='Turisme de Barcelona "BCN & Me"'>
+      <div class="middle">
+        <div class="text">Turisme de Barcelona<br>"BCN & Me"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-07.png?v=2" class="image" alt='Mobilitzats Betevé'>
+      <div class="middle">
+        <div class="text">Mobilitzats<br>Betevé</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-08.png?v=2" class="image" alt='UPF "Videomemòria del curs"'>
+      <div class="middle">
+        <div class="text">UPF<br>"Videomemòria del curs"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-09.png?v=2" class="image" alt='Quarts de nou TV3'>
+      <div class="middle">
+        <div class="text">Quarts de nou<br>TV3</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-10.png?v=2" class="image"
+        alt='Banco Sabadell "Estar donde estés"'>
+      <div class="middle">
+        <div class="text">Banco Sabadell<br>"Estar donde estés"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-11.png?v=2" class="image" alt='Pere Tarrés "Spot 2019"'>
+      <div class="middle">
+        <div class="text">Pere Tarrés<br>"Spot 2019"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-12.png?v=2" class="image"
+        alt='El Retrat del Parlament Canal33'>
+      <div class="middle">
+        <div class="text">El Retrat del Parlament<br>Canal33</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-13.png?v=2" class="image"
+        alt='Hospital del Mar "L&apos;hospital de tots"'>
+      <div class="middle">
+        <div class="text">Hospital del Mar<br>"L&apos;Hospital de tots"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-14.png?v=2" class="image"
+        alt='Fútbol Club Barcelona "Innovation Hub"'>
+      <div class="middle">
+        <div class="text">Fútbol Club Barcelona<br>"Innovation Hub"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-15.png?v=2" class="image" alt='Solvia "Inside Solvia"'>
+      <div class="middle">
+        <div class="text">Solvia<br>"Inside Solvia"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-16.png?v=2" class="image"
+        alt='Documental "Jesús Monzón, el líder olvidado por la historia"'>
+      <div class="middle">
+        <div class="text">Documental<br>"Jesús Monzón, el líder olvidado por la historia"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-17.png?v=2" class="image" alt='Robert Riley, cónsul de EEUU'>
+      <div class="middle">
+        <div class="text">Robert Riley, cónsul de EEUU</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-18.png?v=2" class="image" alt='XLS "Spot 2018"'>
+      <div class="middle">
+        <div class="text">XLS<br>"Spot 2018"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-19.png?v=2" class="image" alt='Suez Agriculture'>
+      <div class="middle">
+        <div class="text">Suez Agriculture</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-20.png?v=2" class="image"
+        alt='Trofeo Conde de Godó "¿Conoces a Rafa?"'>
+      <div class="middle">
+        <div class="text">Trofeo Conde de Godó<br>"¿Conoces a Rafa?"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-21.png?v=2" class="image" alt='Oryon "Somos Oryon"'>
+      <div class="middle">
+        <div class="text">Oryon<br>"Somos Oryon"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-22.png?v=2" class="image" alt='Mitja Marató de Barcelona TVE'>
+      <div class="middle">
+        <div class="text">Mitja Marató de Barcelona<br>TVE</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-23.png?v=2" class="image" alt='Pere Tarrés "Spot 2018"'>
+      <div class="middle">
+        <div class="text">Pere Tarrés<br>"Spot 2018"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-24.png?v=2" class="image"
+        alt='Ajuntament de Barcelona "Tu tens la clau"'>
+      <div class="middle">
+        <div class="text">Ajuntament de Barcelona<br>"Tu tens la clau"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-25.png?v=2" class="image"
+        alt='Turisme de Barcelona "BCN Christmas Shopping"'>
+      <div class="middle">
+        <div class="text">Turisme de Barcelona<br>"BCN Christmas Shopping"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-26.png?v=2" class="image" alt='Suez "iBeach app"'>
+      <div class="middle">
+        <div class="text">Suez<br>"iBeach app"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-27.png?v=2" class="image" alt='Quarts de Nou "Exenxanetes"'>
+      <div class="middle">
+        <div class="text">Quarts de Nou<br>"Exenxanetes"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-28.png?v=2" class="image"
+        alt='Universitat Pompeu Fabra "Graduació"'>
+      <div class="middle">
+        <div class="text">Universitat Pompeu Fabra<br>"Graduació"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-29.png?v=2" class="image" alt='Marató de Barcelona TVE'>
+      <div class="middle">
+        <div class="text">Marató de Barcelona<br>TVE</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-30.png?v=2" class="image"
+        alt='Clínica Corachan "Fans de la Salut"'>
+      <div class="middle">
+        <div class="text">Clínica Corachan<br>"Fans de la Salut"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-31.png?v=2" class="image"
+        alt='25è Aniversari Jocs Olímpics Barcelona 92'>
+      <div class="middle">
+        <div class="text">25è Aniversari Jocs Olímpics Barcelona 92</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-32.png?v=2" class="image"
+        alt='TMB "Las personas estamos hechas de historias"'>
+      <div class="middle">
+        <div class="text">TMB<br>"Las personas estamos hechas de historias"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-33.png?v=2" class="image"
+        alt='Tria33 Extra Canal33 "Revetlla Sound"'>
+      <div class="middle">
+        <div class="text">Tria33 Extra Canal33<br>"Revetlla Sound"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-34.png?v=2" class="image"
+        alt='Tria33 Extra Canal33 "El Circ de demà"'>
+      <div class="middle">
+        <div class="text">Tria33 Extra Canal33<br>"El Circ de demà"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-35.png?v=2" class="image"
+        alt='Turismo de Canarias "La empresa con el mejor clima del mundo"'>
+      <div class="middle">
+        <div class="text">Turismo de Canarias<br>"La empresa con el mejor clima del mundo"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-36.png?v=2" class="image" alt='Banco Sabadell "Toma Aire"'>
+      <div class="middle">
+        <div class="text">Banco Sabadell<br>"Toma Aire"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-37.png?v=2" class="image"
+        alt='Lavinia "Estamos cocinando algo nuevo"'>
+      <div class="middle">
+        <div class="text">Lavinia<br>"Estamos cocinando algo nuevo"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-38.png?v=2" class="image" alt='Privalia "Almatrichi"'>
+      <div class="middle">
+        <div class="text">Privalia<br>"Almatrichi"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-39.png?v=2" class="image"
+        alt='Pere Tarrés "Cap infant sense colònies"'>
+      <div class="middle">
+        <div class="text">Pere Tarrés<br>"Cap infant sense colònies"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-40.png?v=2" class="image"
+        alt='Videoclip "Canción de amor definitiva"'>
+      <div class="middle">
+        <div class="text">Videoclip<br>"Canción de amor definitiva"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-41.png?v=2" class="image"
+        alt='Laboratorios Esteve "Plan estratégico 2019"'>
+      <div class="middle">
+        <div class="text">Laboratorios Esteve<br>"Plan estratégico 2019"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-42.png?v=2" class="image" alt='Pere Tarrés "Spot 2017"'>
+      <div class="middle">
+        <div class="text">Pere Tarrés<br>"Spot 2017"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-43.png?v=2" class="image"
+        alt='Banco Sabadell "Seguros Combinados"'>
+      <div class="middle">
+        <div class="text">Banco Sabadell<br>"Seguros Combinados"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-44.png?v=2" class="image"
+        alt='Loteria de Catalunya "La grossa, la nostra"'>
+      <div class="middle">
+        <div class="text">Loteria de Catalunya<br>"La grossa, la nostra"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-45.png?v=2" class="image" alt='Banco Sabadell "Lola Ochoa"'>
+      <div class="middle">
+        <div class="text">Banco Sabadell<br>"Lola Ochoa"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-46.png?v=2" class="image" alt='Comansi "Spin Bikes"'>
+      <div class="middle">
+        <div class="text">Comansi<br>"Spin Bikes"</div>
+      </div>
+    </div>
+    <div class="grid-item hover-bg"><img src="imgs/frame-47.png?v=2" class="image"
+        alt='Banco Sabadell "Retratos del Vijazz"'>
+      <div class="middle">
+        <div class="text">Banco Sabadell<br>"Retratos del Vijazz"</div>
+      </div>
+    </div>
+  </div>
+
+  <div id='about'>
+    <div id="col-1">
+      <span id='title'>about</span><br>
+      More than 10 years creating video, conceptualizing ideas, filming and editing for television, brands,
+      advertisement and events.
+      Started as a camera, journalist, editor and colorist and soon after began directing. <br>
+      <br>
+      Extensive experience managing filming teams, good customer relationship skills, teamwork, ability to work under
+      pressure and tight timings.
+      Fluent in English, passionate about photography and technology, creative mentality, proactivity and optimism,
+      constant updating in new trends and tools. <br>
+      <br>
+      See full biography on <a style='text-decoration: underline;'
+        href="https://www.linkedin.com/in/judithfrancisco/">LinkedIn</a>
+    </div>
+    <div id='col-2'>
+      <span id='title'>contact</span><br>
+      send me a message at <br><a href="mailto:hello@judith.video">hello@judith.video</a>
+    </div>
+  </div>
+
+  <div id='contact'>
+    <!-- <span id='title'>contact</span><br>
+    send me a message at <a href="mailto:hello@judith.video">hello@judith.video</a> -->
+  </div>
+
+  <footer>
+    <div id='contain-footer'>
+      <div id='copy'>
+        © Judith Francisco. <span id="year">2018</span>.
+      </div>
+      <div id='social-media'>
+        <a href="https://www.linkedin.com/in/judithfrancisco/">
+          <img src="linkedin.svg" width="25px" height="25px" alt="LinkedIn Page" onerror="this.src='linkedin.png'">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+  <script src="https://cdn.plyr.io/3.3.7/plyr.js"></script>
+  <script type='text/javascript'>
+    const player = new Plyr('#player', {
+      /* options */
+      settings: ['quality'], quality: { default: 'hd1080' },
+      storage:	{ enabled: false, key: 'plyr' },
+      muted: true,
+      autoplay: true,
+    });
+
+    // init Masonry
+    var grid = document.querySelector('.grid');
+
+    var msnry = new Masonry(grid, {
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    });
+
+    imagesLoaded(grid).on('progress', function () {
+      // layout Masonry after each image loads
+      msnry.layout();
+    });
+
+    var date = new Date();
+    var year = date.getFullYear();
+    document.getElementById("year").innerHTML = year;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+      //const player = new Plyr('#player');
+    });
+  </script>
+</body>
+
+</html>
